@@ -8,6 +8,7 @@ const productsSchema = new mongoose.Schema({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   image: { type: String, required: true },
+  popular: { type: Boolean, default: false },
 });
 
 const Product = mongoose.model('Product', productsSchema);
