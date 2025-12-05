@@ -7,17 +7,26 @@ dotenv.config();
 
 const seedDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    const { MONGO_USER, MONGO_PASSWORD, MONGO_URL, MONGO_DB } = process.env;
+    await mongoose.connect(
+      `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_URL}/${MONGO_DB}?retryWrites=true&w=majority`,
+    );
     console.log('MongoDB connected!');
 
-    // Очищаємо колекцію перед вставкою
-    await Product.deleteMany({});
-    console.log('Previous products removed');
+    for (const prod of products) {
+      // Підставляємо робоче зображення
+      const imageUrl = `https://picsum.photos/800/600?random=${Math.floor(
+        Math.random() * 1000,
+      )}`;
 
-    // Вставляємо всі товари
-    await Product.insertMany(products);
-    console.log('Products inserted successfully!');
+      await Product.findOneAndUpdate(
+        { id: prod.id },
+        { $set: { ...prod, image: imageUrl } },
+        { upsert: true },
+      );
+    }
 
+    console.log('Products updated/inserted with images successfully!');
     process.exit();
   } catch (err) {
     console.error(err);

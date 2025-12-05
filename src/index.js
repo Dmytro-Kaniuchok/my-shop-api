@@ -1,32 +1,17 @@
-import express from 'express';
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import productsRouter from './routes/products.js';
+import { initMongoConnection } from './db/initMongoConnection.js';
+import { setupServer } from './server.js';
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+async function bootstrap() {
+  try {
+    await initMongoConnection();
+    setupServer();
+  } catch (err) {
+    console.error('Bootstrap error:', err.message);
+    process.exit(1);
+  }
+}
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-// Маршрут для головної сторінки
-app.get('/', (req, res) => {
-  res.send('🛍️ My Shop API is running successfully!');
-});
-
-// Підключення до MongoDB
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
-
-// Підключаємо роути для товарів
-app.use('/products', productsRouter);
-
-// Запуск сервера
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+bootstrap();
