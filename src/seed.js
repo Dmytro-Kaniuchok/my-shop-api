@@ -13,6 +13,10 @@ const seedDB = async () => {
     );
     console.log('MongoDB connected!');
 
+    // Очищаємо всю колекцію перед вставкою
+    await Product.deleteMany({});
+    console.log('Existing products removed');
+
     for (const prod of products) {
       await Product.findOneAndUpdate(
         { id: prod.id },
