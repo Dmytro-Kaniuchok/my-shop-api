@@ -14,19 +14,14 @@ const seedDB = async () => {
     console.log('MongoDB connected!');
 
     for (const prod of products) {
-      // Підставляємо робоче зображення
-      const imageUrl = `https://picsum.photos/800/600?random=${Math.floor(
-        Math.random() * 1000,
-      )}`;
-
       await Product.findOneAndUpdate(
         { id: prod.id },
-        { $set: { ...prod, image: imageUrl } },
+        { $set: { ...prod } },
         { upsert: true },
       );
     }
 
-    console.log('Products updated/inserted with images successfully!');
+    console.log('Products updated/inserted successfully!');
     process.exit();
   } catch (err) {
     console.error(err);
