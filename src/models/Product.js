@@ -10,6 +10,9 @@ const productsSchema = new mongoose.Schema(
     price: { type: Number, required: true },
     image: { type: String, required: true },
     popular: { type: Boolean, default: false },
+    rating: { type: Number, default: 0 },
+    ratingCount: { type: Number, default: 0 },
+    inStock: { type: Boolean, default: true },
   },
   { timestamps: true },
 );
