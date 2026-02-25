@@ -121,7 +121,7 @@ export const products = [
     name: 'Паливний фільтр',
     price: 350,
     brand: 'Mann',
-    sku: 'PF008',
+    sku: 'CX0706',
     image:
       'https://res.cloudinary.com/dqzzwskbk/image/upload/v1765194272/fuel-filter_wk4tvb.webp',
     description:
@@ -537,5 +537,34 @@ export const products = [
     sku: 'BP050',
     image: '/image/sport-brake.jpg',
     description: 'Покращене гальмування для спортивного стилю водіння.',
+  },
+  {
+    id: 'ww-051',
+    name: 'Омивач скла',
+    brand: 'Pure Vida',
+    sku: 'WW070',
+    price: 230,
+    image:
+      'https://res.cloudinary.com/dqzzwskbk/image/upload/v1772022052/omyvach-skla_p5b4a2.png',
+    description: 'Зимовий омивач скла, стійкий до низьких температур. (-20°C)',
+    popular: false,
+    rating: 0,
+    ratingCount: 0,
+    inStock: true,
+  },
+
+  {
+    id: 'ww-052',
+    name: 'Омивач скла (зимовий)',
+    brand: 'Octava',
+    sku: 'WW071',
+    price: 180,
+    image:
+      'https://res.cloudinary.com/dqzzwskbk/image/upload/v1772022166/omyvach-skla1_bwq60x.png',
+    description: 'Зимовий омивач скла, стійкий до низьких температур.',
+    popular: false,
+    rating: 0,
+    ratingCount: 0,
+    inStock: true,
   },
 ];
