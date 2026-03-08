@@ -5,13 +5,13 @@ export const rateProduct = async (req, res) => {
     const { id } = req.params;
     const { rating } = req.body;
 
-    if (!rating || rating < 1 || rating > 5) {
+    if (!rating || typeof rating !== 'number' || rating < 1 || rating > 5) {
       return res
         .status(400)
         .json({ message: 'Rating must be between 1 and 5' });
     }
 
-    const product = await Product.findOne({ id });
+    const product = await Product.findById(id);
 
     if (!product) {
       return res.status(404).json({ message: 'Product not found' });
@@ -22,7 +22,7 @@ export const rateProduct = async (req, res) => {
     const newRating =
       (product.rating * product.ratingCount + rating) / newRatingCount;
 
-    product.rating = newRating;
+    product.rating = Number(newRating.toFixed(1));
     product.ratingCount = newRatingCount;
 
     await product.save();

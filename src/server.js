@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import productsRouter from './routes/products.js';
+
+import productsRouter from './routes/productsRoutes.js';
+import rateRouter from './routes/rateRoutes.js';
+import reviewRouter from './routes/reviewRoutes.js';
 
 import { errorHandler } from './middleware/errorHandler.js';
 import { notFoundHandler } from './middleware/notFoundHandler.js';
@@ -17,7 +20,10 @@ export function setupServer() {
     res.send('AutoAgro Parts API is running!');
   });
 
+  // Роути
   app.use('/products', productsRouter);
+  app.use('/rate', rateRouter);
+  app.use('/reviews', reviewRouter);
 
   app.use(notFoundHandler);
   app.use(errorHandler);
