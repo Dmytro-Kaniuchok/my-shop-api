@@ -1,4 +1,5 @@
 import Review from '../models/Review.js';
+import Product from '../models/Product.js';
 
 export const createReview = async (req, res) => {
   try {
@@ -12,6 +13,17 @@ export const createReview = async (req, res) => {
     });
 
     const savedReview = await review.save();
+
+    const reviews = await Review.find({ productId });
+
+    const ratingCount = reviews.length;
+    const ratingSum = reviews.reduce((sum, r) => sum + r.rating, 0);
+    const newRating = ratingSum / ratingCount;
+
+    await Product.findByIdAndUpdate(productId, {
+      rating: Math.round(newRating * 10) / 10,
+      ratingCount,
+    });
 
     res.status(201).json(savedReview);
   } catch (error) {

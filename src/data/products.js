@@ -2,6 +2,7 @@ export const products = [
   {
     id: 'bp-001',
     name: 'Тормозні колодки (передні)',
+    category: 'Гальмівні колодки',
     price: 800,
     brand: 'Bosch',
     sku: 'BP001',
@@ -14,6 +15,7 @@ export const products = [
   {
     id: 'of-002',
     name: 'Фільтр масляний',
+    category: 'Фільтри',
     price: 250,
     brand: 'Mann',
     sku: 'OF002',
@@ -26,6 +28,7 @@ export const products = [
   {
     id: 'sp-003',
     name: 'Свічка запалювання',
+    category: 'Свічки',
     price: 150,
     brand: 'Dnipro-M',
     sku: 'SP003',
@@ -38,6 +41,7 @@ export const products = [
   {
     id: 'bf-004',
     name: 'Повітряний фільтр',
+    category: 'Фільтри',
     price: 300,
     brand: 'Bosch',
     sku: 'BF004',
@@ -49,7 +53,8 @@ export const products = [
   {
     id: 'bp-051',
     name: 'Тормозні колодки Bosch',
-    description: 'Надійні колодки для безпечного гальмування',
+    category: 'Гальмівні колодки',
+    description: 'Надійні колodки для безпечного гальмування',
     brand: 'Bosch',
     sku: 'BP051',
     image: '/image/product1.jpg',
@@ -59,6 +64,7 @@ export const products = [
   {
     id: 'oil-001',
     name: 'Моторна олива Castrol',
+    category: 'Мастила',
     description: 'Захищає двигун у будь-яких умовах',
     brand: 'Castrol',
     sku: 'MO001-CASTROL',
@@ -70,6 +76,7 @@ export const products = [
   {
     id: 'bat-001',
     name: 'Акумулятор Varta',
+    category: 'Акумулятори',
     brand: 'Varta',
     description: 'Стабільний запуск за будь-якої погоди',
     image:
@@ -80,6 +87,8 @@ export const products = [
   {
     id: 'flt-001',
     name: 'Повітряний фільтр Mann',
+    category: 'Фільтри',
+    brand: 'Mann',
     description: 'Якісна фільтрація повітря в системі двигуна',
     image: '/image/product4.jpg',
     price: 450,
@@ -88,6 +97,7 @@ export const products = [
   {
     id: 'rf-005',
     name: 'Ремінь ГРМ',
+    category: 'Ремені',
     price: 1200,
     brand: 'Contitech',
     sku: 'RF005',
@@ -95,10 +105,12 @@ export const products = [
       'https://res.cloudinary.com/dqzzwskbk/image/upload/v1765194124/timing-belt_i3t4vc.webp',
     description:
       'Надійний ремінь ГРМ для точного синхронного руху деталей двигуна.',
+    popular: true,
   },
   {
     id: 'br-006',
     name: 'Гальмівний диск',
+    category: 'Гальмівні колодки',
     price: 1500,
     brand: 'Brembo',
     sku: 'BR006',
@@ -109,6 +121,7 @@ export const products = [
   {
     id: 'cb-007',
     name: 'Свічка накалу',
+    category: 'Свічки',
     price: 400,
     brand: 'NGK',
     sku: 'CB007',
@@ -119,6 +132,7 @@ export const products = [
   {
     id: 'pf-008',
     name: 'Паливний фільтр',
+    category: 'Фільтри',
     price: 350,
     brand: 'Mann',
     sku: 'CX0706',
@@ -130,6 +144,7 @@ export const products = [
   {
     id: 'sh-009',
     name: 'Рульова тяга',
+    category: 'Рульові компоненти',
     price: 900,
     brand: 'TRW',
     sku: 'SH009',
@@ -140,6 +155,7 @@ export const products = [
   {
     id: 'sb-010',
     name: 'Підшипник колісний',
+    category: 'Підшипники',
     price: 750,
     brand: 'SKF',
     sku: 'SB010',
@@ -151,6 +167,7 @@ export const products = [
   {
     id: 'bp-011',
     name: 'Тормозні колодки (задні)',
+    category: 'Гальмівні колодки',
     price: 850,
     brand: 'Bosch',
     sku: 'BP011',
@@ -160,6 +177,7 @@ export const products = [
   {
     id: 'cf-012',
     name: 'Фільтр салонний',
+    category: 'Фільтри',
     price: 220,
     brand: 'Mann',
     sku: 'CF012',
@@ -170,6 +188,7 @@ export const products = [
   {
     id: 'ws-013',
     name: 'Щітки склоочисника',
+    category: 'Щітки',
     price: 180,
     brand: 'Bosch',
     sku: 'WS013',
@@ -181,6 +200,7 @@ export const products = [
   {
     id: 'cl-014',
     name: 'Свічка запалювання Iridium',
+    category: 'Свічки',
     price: 300,
     brand: 'NGK',
     sku: 'CL014',
@@ -191,6 +211,7 @@ export const products = [
   {
     id: 'ac-015',
     name: 'Компресор кондиціонера',
+    category: 'Кондиціонери',
     price: 3500,
     brand: 'Valeo',
     sku: 'AC015',
@@ -201,6 +222,7 @@ export const products = [
   {
     id: 'bt-016',
     name: 'Акумулятор 60Ah',
+    category: 'Акумулятори',
     price: 1800,
     brand: 'Varta',
     sku: 'BT016',
@@ -211,6 +233,7 @@ export const products = [
   {
     id: 'ex-017',
     name: 'Глушник',
+    category: 'Виходи вихідних газів',
     price: 1200,
     brand: 'Bosal',
     sku: 'EX017',
@@ -220,6 +243,7 @@ export const products = [
   {
     id: 'rp-018',
     name: 'Ремінь приводу генератора',
+    category: 'Ремені',
     price: 400,
     brand: 'Contitech',
     sku: 'RP018',
@@ -231,6 +255,7 @@ export const products = [
   {
     id: 'ts-019',
     name: 'Термостат',
+    category: 'Термостати',
     price: 350,
     brand: 'ThermoTop',
     sku: 'TS019',
@@ -241,6 +266,7 @@ export const products = [
   {
     id: 'wp-020',
     name: 'Водяна помпа',
+    category: 'Помпи',
     price: 950,
     brand: 'Gates',
     sku: 'WP020',
@@ -251,6 +277,7 @@ export const products = [
   {
     id: 'sr-021',
     name: 'Стартер',
+    category: 'Стартери',
     price: 2200,
     brand: 'Bosch',
     sku: 'SR021',
@@ -261,6 +288,7 @@ export const products = [
   {
     id: 'cg-022',
     name: 'Генератор',
+    category: 'Генератори',
     price: 3800,
     brand: 'Valeo',
     sku: 'CG022',
@@ -271,6 +299,7 @@ export const products = [
   {
     id: 'rm-023',
     name: 'Ремінь кондиціонера',
+    category: 'Ремені',
     price: 300,
     brand: 'Contitech',
     sku: 'RM023',
@@ -281,6 +310,7 @@ export const products = [
   {
     id: 'bl-024',
     name: 'Блок циліндрів',
+    category: 'Блоки двигунів',
     price: 8000,
     brand: 'Motorcraft',
     sku: 'BL024',
@@ -291,6 +321,7 @@ export const products = [
   {
     id: 'pf-025',
     name: 'Паливний насос',
+    category: 'Паливні системи',
     price: 1500,
     brand: 'Bosch',
     sku: 'PF025',
@@ -300,6 +331,7 @@ export const products = [
   {
     id: 'df-026',
     name: 'Датчик температури',
+    category: 'Датчики',
     price: 400,
     brand: 'VDO',
     sku: 'DF026',
@@ -310,6 +342,7 @@ export const products = [
   {
     id: 'os-027',
     name: 'Опора двигуна',
+    category: 'Опори двигунів',
     price: 650,
     brand: 'Febi',
     sku: 'OS027',
@@ -319,6 +352,7 @@ export const products = [
   {
     id: 'tc-028',
     name: 'Трос сцеплення',
+    category: 'Рульові компоненти',
     price: 550,
     brand: 'LUK',
     sku: 'TC028',
@@ -328,6 +362,7 @@ export const products = [
   {
     id: 'cl-029',
     name: 'Диск сцеплення',
+    category: 'Сцеплення',
     price: 2000,
     brand: 'Sachs',
     sku: 'CL029',
@@ -339,6 +374,7 @@ export const products = [
   {
     id: 'pr-030',
     name: 'Пружина підвіски',
+    category: 'Пружини',
     price: 600,
     brand: 'Monroe',
     sku: 'PR030',
@@ -349,6 +385,7 @@ export const products = [
   {
     id: 'sh-031',
     name: 'Амортизатор',
+    category: 'Амортизатори',
     price: 1200,
     brand: 'Bilstein',
     sku: 'SH031',
@@ -359,6 +396,7 @@ export const products = [
   {
     id: 'rt-032',
     name: 'Рульова рейка',
+    category: 'Рульові компоненти',
     price: 3200,
     brand: 'TRW',
     sku: 'RT032',
@@ -368,6 +406,7 @@ export const products = [
   {
     id: 'fd-033',
     name: 'Фара передня',
+    category: 'Фари',
     price: 2500,
     brand: 'Hella',
     sku: 'FD033',
@@ -378,6 +417,7 @@ export const products = [
   {
     id: 'tl-034',
     name: 'Ліхтар задній',
+    category: 'Фари',
     price: 1200,
     brand: 'Hella',
     sku: 'TL034',
@@ -388,6 +428,7 @@ export const products = [
   {
     id: 'bm-035',
     name: 'Блок керування двигуном',
+    category: 'Блоки керування',
     price: 4500,
     brand: 'Bosch',
     sku: 'BM035',
@@ -398,6 +439,7 @@ export const products = [
   {
     id: 'df-036',
     name: 'Датчик тиску масла',
+    category: 'Датчики',
     price: 500,
     brand: 'VDO',
     sku: 'DF036',
@@ -409,6 +451,7 @@ export const products = [
   {
     id: 'pc-037',
     name: 'Підшипник колінвала',
+    category: 'Підшипники',
     price: 1500,
     brand: 'SKF',
     sku: 'PC037',
@@ -418,6 +461,7 @@ export const products = [
   {
     id: 'ct-038',
     name: 'Циліндр гальмівний',
+    category: 'Гальма',
     price: 900,
     brand: 'ATE',
     sku: 'CT038',
@@ -429,6 +473,7 @@ export const products = [
   {
     id: 'rs-039',
     name: 'Радіатор охолодження',
+    category: 'Охолодження',
     price: 2200,
     brand: 'Valeo',
     sku: 'RS039',
@@ -439,6 +484,7 @@ export const products = [
   {
     id: 'cc-040',
     name: 'Конденсатор кондиціонера',
+    category: 'Кондиціонери',
     price: 700,
     brand: 'Valeo',
     sku: 'CC040',
@@ -448,6 +494,7 @@ export const products = [
   {
     id: 'fs-041',
     name: 'Форсунка паливна',
+    category: 'Паливні системи',
     price: 1200,
     brand: 'Bosch',
     sku: 'FS041',
@@ -457,6 +504,7 @@ export const products = [
   {
     id: 'mm-042',
     name: 'Модуль запалювання',
+    category: 'Паливні системи',
     price: 900,
     brand: 'NGK',
     sku: 'MM042',
@@ -466,6 +514,7 @@ export const products = [
   {
     id: 'pb-043',
     name: 'Підшипник кульковий',
+    category: 'Підшипники',
     price: 400,
     brand: 'SKF',
     sku: 'PB043',
@@ -475,6 +524,7 @@ export const products = [
   {
     id: 'gh-044',
     name: 'Гідропідсилювач керма',
+    category: 'Рульові компоненти',
     price: 2800,
     brand: 'TRW',
     sku: 'GH044',
@@ -485,6 +535,7 @@ export const products = [
   {
     id: 'fb-045',
     name: 'Фільтр бензиновий',
+    category: 'Паливні системи',
     price: 320,
     brand: 'Mann',
     sku: 'FB045',
@@ -494,6 +545,7 @@ export const products = [
   {
     id: 'ts-046',
     name: 'Трос ручного гальма',
+    category: 'Гальма',
     price: 500,
     brand: 'LUK',
     sku: 'TS046',
@@ -504,6 +556,7 @@ export const products = [
   {
     id: 'bp-047',
     name: 'Блок ламп задніх',
+    category: 'Фари',
     price: 900,
     brand: 'Hella',
     sku: 'BP047',
@@ -513,6 +566,7 @@ export const products = [
   {
     id: 'sp-048',
     name: 'Свічка розжарювання',
+    category: 'Свічки',
     price: 450,
     brand: 'Bosch',
     sku: 'SP048',
@@ -523,6 +577,7 @@ export const products = [
   {
     id: 'fm-049',
     name: 'Фільтр масляний високої продуктивності',
+    category: 'Фільтри',
     price: 350,
     brand: 'Mann',
     sku: 'FM049',
@@ -532,6 +587,7 @@ export const products = [
   {
     id: 'bp-050',
     name: 'Тормозні колодки спортивні',
+    category: 'Гальмівні колодки',
     price: 1200,
     brand: 'Brembo',
     sku: 'BP050',
@@ -541,6 +597,7 @@ export const products = [
   {
     id: 'ww-051',
     name: 'Омивач скла',
+    category: 'Омивачі скла',
     brand: 'Pure Vida',
     sku: 'WW070',
     price: 230,
@@ -556,6 +613,7 @@ export const products = [
   {
     id: 'ww-052',
     name: 'Омивач скла (зимовий)',
+    category: 'Омивачі скла',
     brand: 'Octava',
     sku: 'WW071',
     price: 180,
